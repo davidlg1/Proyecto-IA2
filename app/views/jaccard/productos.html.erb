@@ -1,0 +1,25 @@
+<h1> Ingresar Producto </h1>
+<%= form_tag :action => 'productos' do %>
+<p>Nombre:
+<%= text_field_tag 'nombre_producto' %></p>
+<p>Descripcion:
+<%= text_field_tag 'descripcion_producto' %></p>
+<%= submit_tag 'Guardar' %>
+<% end %>
+<p> <strong> <%= @mensaje_error %> </strong> </p>
+<h1> Productos relacionados </h1>
+
+<table BORDER=1 WIDTH=1000 >
+<tr>
+  <td><strong>Nombre</strong></td>
+</tr>
+ 
+ <% @arreglo.length.times do |i| %>
+	<% if @arreglo[i][3] > 0 and @ultimo.nombre != @arreglo[i][1] %>
+	<tr>
+		<td> <%= @arreglo[i][1] %> </td>
+	</tr>
+	<% end %>
+<% end %>
+
+</table>

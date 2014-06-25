@@ -1,0 +1,13 @@
+<h2> Consultas y/o preguntas </h2>
+<table BORDER=1 WIDTH=1000 >
+<tr>
+  <td><strong>Soporte Tecnico</strong></td>
+  <td><strong>Comercial</strong></td>
+</tr>
+<% @mayor.times do |i| %>
+<tr>
+	<td> <%= @lista_soporte[i] %> </td>
+	<td> <%= @lista_comercial[i] %> </td>
+</tr>
+<% end %>
+</table>

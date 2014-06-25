@@ -1,0 +1,8 @@
+<h1>Ingresa tu consulta</h1>
+<%= form_tag :action => 'consultas' do %>
+<p>Preguntar/Consultar:
+<%= text_field_tag 'consulta' %></p>
+<%= submit_tag 'Enviar' %>
+<% end %>
+
+<%= link_to 'Consultas y/o preguntas', 'ver_consultas' %>
